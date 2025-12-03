@@ -11,7 +11,9 @@
     }
   ],
   "env": {
-    "APP_ENV": "production",
+    "APP_ENV": "local",
+      "APP_NAME":"CalmSphere",
+"APP_KEY":"base64:LrGFK95hjKpze4rjKbriGascgMzoCQCCeHICB7IvkE4=",
     "APP_DEBUG": "true",
     "APP_URL": "https://calm-sphere-six.vercel.app/",
 
