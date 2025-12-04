@@ -37,7 +37,7 @@
     "SESSION_DRIVER": "cookie",
 
     "DB_CONNECTION": "mysql",
-    "DB_HOST": "http://sql12.freesqldatabase.com",
+    "DB_HOST": "sql12.freesqldatabase.com",
     "DB_PORT": "3306",
     "DB_DATABASE": "sql12810501",
     "DB_USERNAME": "sql12810501",
