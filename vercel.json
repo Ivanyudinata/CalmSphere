@@ -13,15 +13,10 @@
     },
       
     {
-      "src": "/public/(.*)",
-      "dest": "/public/$1"
-    },
-    {
       "src": "/(.*)",
       "dest": "/public/index.php"
     }
   ],
-    "outputDirectory": "public",
   "buildCommand": "npm run build",
   "installCommand": "npm install",
   "env": {
