@@ -22,7 +22,8 @@
     }
   ],
     "outputDirectory": "public",
-  "buildCommand": "npm install && npm run build",
+  "buildCommand": "npm run build",
+  "installCommand": "npm install",
   "env": {
     "APP_ENV": "local",
       "APP_NAME":"CalmSphere",
