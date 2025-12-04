@@ -1,23 +1,25 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "version": 2,
   "framework": null,
-  "builds": [
-   { "src": "public/index.php",
-       "use":"vercel-php@0.7.4" }
-  ],
+
+  "functions": {
+    "api/index.php": {
+      "runtime": "vercel-php@0.7.4"
+    }
+  },
   "routes": [
-      {
+    {
       "src": "/build/(.*)",
       "dest": "/build/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "public/index.php"
+      "dest": "/api/index.php"
     }
   ],
     "outputDirectory": "public",
-      "buildCommand": "composer install --no-dev --optimize-autoloader && npm ci && npm run build"
-,
+  "buildCommand": "composer install --no-dev --optimize-autoloader && npm install && npm run build",
   "env": {
     "APP_ENV": "local",
       "APP_NAME":"CalmSphere",
