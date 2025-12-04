@@ -12,8 +12,8 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
         <!-- Scripts -->
-        <link rel="stylesheet" href="/public/resources/css/app.css">
-<script type="module" src="/public/resources/js/app.js"></script>
+        <link rel="stylesheet" href="/build/resources/css/app.css">
+<script type="module" src="/build/resources/js/app.js"></script>
     </head>
     <body class="font-sans text-gray-900 antialiased">
         {{ $slot }}
