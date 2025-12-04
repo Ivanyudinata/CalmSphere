@@ -21,11 +21,6 @@
       "src": "/(.*)",
       "dest": "/api/index.php"
     },
-      
-        {
-            "src": "/resources/dist/(.*)",
-            "dest": "/public/resources/dist/$1"
-        },
   ],
     
     "outputDirectory": "public"
