@@ -1,5 +1,4 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
   "version": 2,
   "framework": null,
 "builds": [
@@ -7,6 +6,11 @@
        "use":"vercel-php@0.7.4" }
   ],
   "routes": [
+      
+        {
+            "src": "/(.*\\.(?:css|js|png|jpg|jpeg|gif|svg|ico|ttf|woff|woff2|eot|otf|webp|avif|txt))$",
+            "dest": "/public/$1"
+        },
     {
       "src": "/build/(.*)",
       "dest": "/build/$1"
@@ -17,66 +21,6 @@
       "dest": "/public/index.php"
     }
   ],
-  "buildCommand": "npm run build",
-  "installCommand": "npm install",
-  "env": {
-    "APP_ENV": "local",
-      "APP_NAME":"CalmSphere",
-"APP_KEY":"base64:LrGFK95hjKpze4rjKbriGascgMzoCQCCeHICB7IvkE4=",
-    "APP_DEBUG": "true",
-    "APP_URL": "https://calm-sphere-six.vercel.app/",
-
-    "APP_CONFIG_CACHE": "/tmp/config.php",
-    "APP_EVENTS_CACHE": "/tmp/events.php",
-    "APP_PACKAGES_CACHE": "/tmp/packages.php",
-    "APP_ROUTES_CACHE": "/tmp/routes.php",
-    "APP_SERVICES_CACHE": "/tmp/services.php",
-    "VIEW_COMPILED_PATH": "/tmp",
-
-    "CACHE_DRIVER": "array",
-    "LOG_CHANNEL": "stderr",
-    "SESSION_DRIVER": "cookie",
-
-    "DB_CONNECTION": "mysql",
-    "DB_HOST": "http://sql12.freesqldatabase.com",
-    "DB_PORT": "3306",
-    "DB_DATABASE": "sql12810501",
-    "DB_USERNAME": "sql12810501",
-    "DB_PASSWORD": "uG9AzUPnnt",
-
-    "SESSION_LIFETIME": "120",
-    "SESSION_ENCRYPT": "false",
-    "SESSION_PATH": "/",
-    "SESSION_DOMAIN": "null",
-
-    "BROADCAST_CONNECTION": "log",
-    "FILESYSTEM_DISK": "local",
-    "QUEUE_CONNECTION": "database",
-
-    "CACHE_STORE": "database",
-
-    "MEMCACHED_HOST": "https://calm-sphere-six.vercel.app/",
-
-    "REDIS_CLIENT": "phpredis",
-    "REDIS_HOST": "https://calm-sphere-six.vercel.app/",
-    "REDIS_PASSWORD": "null",
-    "REDIS_PORT": "6379",
-
-    "MAIL_MAILER": "log",
-    "MAIL_SCHEME": "null",
-    "MAIL_HOST": "https://calm-sphere-six.vercel.app/",
-    "MAIL_PORT": "2525",
-    "MAIL_USERNAME": "null",
-    "MAIL_PASSWORD": "null",
-    "MAIL_FROM_ADDRESS": "hello@example.com",
-    "MAIL_FROM_NAME": "CalmSphere",
-
-    "AWS_ACCESS_KEY_ID": "",
-    "AWS_SECRET_ACCESS_KEY": "",
-    "AWS_DEFAULT_REGION": "us-east-1",
-    "AWS_BUCKET": "",
-    "AWS_USE_PATH_STYLE_ENDPOINT": "false",
-
-    "VITE_APP_NAME": "CalmSphere"
-  }
+    
+    "outputDirectory": "public"
 }
