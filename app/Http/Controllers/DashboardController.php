@@ -19,7 +19,7 @@ class DashboardController extends Controller
         $streak = 0;
         $lastMoodDate = Mood::where('user_id', $user->id)->latest('created_at')->value('created_at');
         
-        if ($lastMoodDate && $lastMoodDate->isToday() || $lastMoodDate->isYesterday()) {
+        if ($lastMoodDate && $lastMoodDate->isToday() ) {
             $streak = 1;
             // In a real app, we'd query past days to count consecutive entries.
             // For demo, we'll just use a random number or simple logic if needed, 
